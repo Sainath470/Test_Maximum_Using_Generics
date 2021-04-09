@@ -14,4 +14,10 @@ class MaximumValueTest<T> {
         T firstMaxValue = (T) Obj2.findMaximumValue(42, 76, 43);
         Assertions.assertEquals(76, firstMaxValue);
     }
+
+    @Test
+    void GivenThreeIntegersGiven_MaximumValue_ThirdPositionReturns() {
+        T firstMaxValue = (T) Obj2.findMaximumValue(21, 32, 77);
+        Assertions.assertEquals(77, firstMaxValue);
+    }
 }
