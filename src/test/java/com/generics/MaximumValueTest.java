@@ -15,4 +15,9 @@ class MaximumValueTest<T> {
         T secondIntegerValue = (T) Obj1.findMaximumValue(42, 76, 43);
         Assertions.assertEquals(76, secondIntegerValue);
     }
+    @Test
+    void GivenThreeIntegers_When_Given_ThirdPositionReturns() {
+        T thirdIntegerValue = (T) Obj1.findMaximumValue(21, 32, 77);
+        Assertions.assertEquals(77, thirdIntegerValue);
+    }
 }
