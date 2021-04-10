@@ -21,8 +21,7 @@ class MaximumValueTest<T> {
     @Test
     public void WhenGiven_3String_Values_Gives_ResultBased_OnLength() {
         MaximumGeneric<String> stringObj = new MaximumGeneric<>();
-        int stringMaxValue = stringObj.findStringMaximumValue("Banana","kiwi","peach");
-        Assertions.assertEquals(6,stringMaxValue);
+        String stringMaxValue = stringObj.findStringMaximumValue("Banana", "kiwi", "peach");
+        Assertions.assertEquals("Banana", stringMaxValue);
     }
-
 }
