@@ -1,11 +1,10 @@
 package com.generics;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-class MaximumValueTest<T> {
+class MaximumValueTest{
 
     @Test
     public void WhenGiven_3types_Returns_TheResult(){
-
         MaximumValue<Integer> intObj = new MaximumValue<>(12, 21, 34, 43, 54);
         int integerMaxValue = intObj.findMaximum();
         Assertions.assertEquals(54, integerMaxValue);
