@@ -7,7 +7,7 @@ class MaximumValueTest<T>{
     
     @Test
     void GivenThreeIntegersGiven_MaximumValue_FirstPositionReturns(){
-        T firstMaxValue = intObj.findMaximumValue(91,32,43);
+        int firstMaxValue = intObj.findMaximumValue(91,32,43);
         Assertions.assertEquals(91, firstMaxValue);
     }
     
