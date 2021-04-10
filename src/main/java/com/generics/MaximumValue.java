@@ -25,18 +25,25 @@ public class MaximumValue<T extends Comparable<T>>{
         listObj.add(fourthValue);
         listObj.add(fifthValue);
         Collections.sort(listObj);
-        return listObj.get(4);
+        T maxValue = listObj.get(4);
+        return maxValue;
     }
 
     public T findMaximum(){
         return MaximumValue.testMaximum(firstValue,secondValue,thirdValue,fourthValue,fifthValue);
     }
 
+
+    public  <T> void printMax(){
+        System.out.println("Maximum Value in :"+firstValue+","+secondValue+","+thirdValue+
+                ","+fourthValue+","+fifthValue+" is "+MaximumValue.testMaximum(firstValue,secondValue,thirdValue,fourthValue,fifthValue));
+    }
+
     public static void main(String[] args) {
         MaximumValue<Integer> intObj = new MaximumValue<>(1,2,3,4,5);
-        System.out.println("Maximum integer value: "+intObj.findMaximum());
+        intObj.printMax();
         MaximumValue<Float> floatObj = new MaximumValue<>(12.5f,11.5f,32.4f,21.6f,13.7f);
-        System.out.println("Maximum Float Value :"+floatObj.findMaximum());
+        floatObj.printMax();
         MaximumGeneric<String> stringObj = new MaximumGeneric<>();
         System.out.println("Maximum String Value: "+stringObj.findStringMaximumValue("Banana","Peach","Apple"));
     }
