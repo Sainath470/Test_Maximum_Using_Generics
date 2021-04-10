@@ -6,18 +6,18 @@ class MaximumValueTest<T> {
 
     @Test
     void Given_ThreeStrings_When_Given_MaximumValue_FirstPositionReturns(){
-        T firstMaxValue= (T) Obj2.findMaximumValue("Peach","Apple","Banana");
+        String firstMaxValue = Obj2.findMaximumValue("Peach","Apple","Banana");
         Assertions.assertEquals("Peach", firstMaxValue);
     }
     @Test
     void Given_ThreeStrings_When_Given_MaximumValue_SecondPositionReturns() {
-        T firstMaxValue = (T) Obj2.findMaximumValue("Apple","Kiwi","Banana");
-        Assertions.assertEquals("Kiwi", firstMaxValue);
+        String secondMaxValue = Obj2.findMaximumValue("Apple","Kiwi","Banana");
+        Assertions.assertEquals("Kiwi", secondMaxValue);
     }
 
     @Test
     void Given_ThreeStirngs_When_Given_MaximumValue_ThirdPositionReturns() {
-        T firstMaxValue = (T) Obj2.findMaximumValue("Apple","Mango","Peach");
-        Assertions.assertEquals("Peach", firstMaxValue);
+        String thirdMaxValue = Obj2.findMaximumValue("Apple","Mango","Peach");
+        Assertions.assertEquals("Peach", thirdMaxValue);
     }
 }
