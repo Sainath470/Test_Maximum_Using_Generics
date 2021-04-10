@@ -5,13 +5,18 @@ class MaximumValueTest<T>{
 
     @Test
     void GivenThreeIntegersGiven_MaximumValue_FirstPositionReturns(){
-        int firstMaxValue = Obj2.findMaximumValue(91,32,43);
+        T firstMaxValue =  Obj2.findMaximumValue(91,32,43);
         Assertions.assertEquals(91, firstMaxValue);
+    }
+    @Test
+    void GivenThreeIntegersGiven_MaximumValue_SecondPositionReturns(){
+        int secondMaxValue =  Obj2.findMaximumValue(42, 76, 43);
+        Assertions.assertEquals(76, secondMaxValue);
     }
 
     @Test
-    void GivenThreeIntegersGiven_MaximumValue_SecondPositionReturns(){
-        int secondMaxValue = Obj2.findMaximumValue(42, 76, 43);
-        Assertions.assertEquals(76, secondMaxValue);
+    void GivenThreeIntegersGiven_MaximumValue_ThirdPositionReturns() {
+        int thirdMaxValue = Obj2.findMaximumValue(21, 32, 77);
+        Assertions.assertEquals(77, thirdMaxValue);
     }
 }
