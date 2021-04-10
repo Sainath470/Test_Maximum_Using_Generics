@@ -6,18 +6,18 @@ class MaximumValueTest<T> {
 
     @Test
     void GivenThreeFloatGiven_MaximumValue_FirstPositionReturns(){
-        T firstMaxValue= (T) Obj2.findMaximumValue(91.0,32.3,43.4);
-        Assertions.assertEquals(91.0, firstMaxValue);
+        float firstMaxValue = Obj2.findMaximumValue(91.0f,32.3f,43.4f);
+        Assertions.assertEquals(91.0f, firstMaxValue);
     }
     @Test
     void GivenThreeFloatGiven_MaximumValue_SecondPositionReturns() {
-        T firstMaxValue = (T) Obj2.findMaximumValue(42.1, 76.4, 43.3);
-        Assertions.assertEquals(76.4, firstMaxValue);
+        float secondMaxValue = Obj2.findMaximumValue(42.1f, 76.4f, 43.3f);
+        Assertions.assertEquals(76.4f, secondMaxValue);
     }
 
     @Test
     void GivenThreeFloatGiven_MaximumValue_ThirdPositionReturns() {
-        T firstMaxValue = (T) Obj2.findMaximumValue(21.4, 32.3, 77.5);
-        Assertions.assertEquals(77.5, firstMaxValue);
+        float thirdMaxValue = Obj2.findMaximumValue(21.4f, 32.3f, 77.5f);
+        Assertions.assertEquals(77.5f, thirdMaxValue);
     }
 }
