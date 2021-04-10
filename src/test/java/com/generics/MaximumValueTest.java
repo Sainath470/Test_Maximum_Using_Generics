@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 class MaximumValueTest<T> {
 
     @Test
-    public void WhenGiven_3types_Returns_TheResult() {
+    public void WhenGiven_Integer_Type_Values_Returns_TheResult() {
 
         MaximumValue<Integer> intObj = new MaximumValue<>(12, 21, 34, 43, 54);
         int integerMaxValue = intObj.findMaximum();
@@ -12,17 +12,17 @@ class MaximumValueTest<T> {
     }
 
     @Test
-    public void WhenGiven_3Float_Values_Gives_Result() {
+    public void WhenGiven_Float_Type_Values_Gives_Result() {
         MaximumValue<Float> floatObj = new MaximumValue<>(12.5f, 22.5f, 43.6f, 11.2f, 10.1f);
         float floatMaxValue = floatObj.findMaximum();
         Assertions.assertEquals(43.6f, floatMaxValue);
     }
 
     @Test
-    public void WhenGiven_3String_Values_Gives_ResultBased_OnLength() {
+    public void WhenGiven_String_Type_Values_Gives_ResultBased_OnLength() {
         MaximumGeneric<String> stringObj = new MaximumGeneric<>();
-        int stringMaxValue = stringObj.findStringMaximumValue("Banana","kiwi","peach");
-        Assertions.assertEquals(6,stringMaxValue);
+        String stringMaxValue = stringObj.findStringMaximumValue("Banana","kiwi","peach");
+        Assertions.assertEquals("Banana",stringMaxValue);
     }
 
 }
